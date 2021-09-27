@@ -1,0 +1,480 @@
+@import 'utilities.css';
+@import 'mobile.css';
+@import 'tablate.css';
+@import 'laptop.css';
+:root{
+    --white: rgb(255, 255, 255);
+    --white-shade: rgba(252, 252, 252, 0.9);
+    --light-blue: rgb(71, 175, 207);
+    --blue-theme: rgb(240, 251, 255);
+    --blue-pro: rgb(197, 211, 230);
+    --blue-theme-shade: rgb(153, 193, 238);
+    --fainted-blue: rgb(94, 164, 230);
+    --blue-dark: rgb(31, 31, 51);
+    --blue-transperent: rgba(0, 0, 255, 0.274);
+    --black: rgb(0, 0, 0);
+    --black-shade: rgb(37, 37, 37);
+    --light-gray: rgb(223, 223, 223);
+    --font1: rgb(0, 72, 114);
+    --black-transperent: rgba(151, 151, 151, 0.705);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing:antialiased;
+}
+body{font-family: 'Montserrat', sans-serif;}
+
+header{
+    background: rgba(131, 131, 131, 0.164) url(../images/bg4.jpg);
+    background-blend-mode: darken;
+    min-height: 320px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar-container-my{
+    padding: 3px 0;
+    background:var(--black-transperent);
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0 7px rgba(0,0,0,0.15);
+    z-index: 5;
+}
+.container-my{
+    max-width: 1280px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.navigations{
+    margin-left: 3rem;
+}
+.branding img{
+    width: 50px;
+    padding: 5px;
+}
+header nav .navigations a{
+    position: relative;
+    color: var(--black);
+    font-size: large;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+header nav .navigations a:after{
+    content: "";
+    position: absolute;
+    background-color: var(--blue-theme);
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+    
+}
+header nav .navigations a:hover{
+    color: var(--blue-theme);
+}
+header nav .navigations a:hover:after{
+    width: 100%;
+}
+header nav .branding{
+    margin-right: 0rem;
+}
+.intro-title{
+    color: var(--black-shade); 
+    font-family: 'Montserrat', sans-serif; 
+    padding: auto; flex-wrap: wrap;
+}
+.sub-intro{
+    padding-top: 160px;
+    flex-wrap: wrap;
+}
+.sub-intro h1{
+    font-size: 3.5rem;
+    font-weight: 600; 
+}
+.sub-intro h2{
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.projects{
+    padding: 2rem 0 ;
+    margin: 0;
+    background: var(--blue-pro);
+}
+.projects .project-row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.projects a{
+    text-decoration: none;
+    color: var(--font1);
+    font-size: 1rem;
+    font-weight: 500;
+}
+.projects a:hover{
+    text-decoration: none;
+    color: var(--fainted-blue);
+}
+.projects .skills-section .card{
+    width: 100%; margin: 05px; line-height: 0.5rem;
+}
+.projects .skills-section .card .lineH{
+    line-height: normal;
+}
+.projects .card-01:hover{border-color: var(--black-shade);}
+.projects .skills-section .col-sm-2{
+    float: left; 
+    width: 18rem;
+    margin: 0 50px;
+}
+
+.contacts{
+    color: white;
+    padding: 1rem 0;
+    background: var(--blue-dark);
+}
+.contacts .contacts-section{
+    padding: 5rem;
+}
+.contacts .contacts-section .row{
+    padding: 5rem;
+}
+footer .copyright{
+    background: black;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+footer .copyright p{padding: 5px; margin: 0;}
+
+@media screen and (max-width:1200px) {
+    .projects .skills-section .col-sm-2{
+        float: left; 
+        width: 30%;
+    }
+}
+@media screen and (max-width:1024px) {
+    .projects .skills-section .col-sm-2{
+        float: left; 
+        width: 30%;
+    }
+}
+@media screen and (max-width:900px) {
+    header{min-height: 350px;}
+    .navbar-container-my{
+        padding: 3px 0;
+        background:var(--black-transperent);
+        position: fixed;
+        width: 100%;
+        box-shadow: 0 0 7px rgba(0,0,0,0.15);
+        z-index: 5;
+    }
+    .container-my{
+        max-width: 1280px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+    .navigations{
+        margin-left: 3rem;
+    }
+    .branding img{
+        width: 50px;
+        padding: 5px;
+    }
+    header nav .navigations a{
+        position: relative;
+        color: var(--black);
+        font-size: large;
+        font-weight: 600;
+        text-decoration: none;
+        margin-right: 2rem;
+        text-transform: uppercase;
+        transition: all 0.2s ease;
+    }
+    header nav .navigations a:after{
+        content: "";
+        position: absolute;
+        background-color: var(--blue-theme);
+        height: 2px;
+        width: 0;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;
+        
+    }
+    header nav .navigations a:hover{
+        color: var(--blue-theme);
+    }
+    header nav .navigations a:hover:after{
+        width: 100%;
+    }
+    header nav .branding{
+        margin-right: 0rem;
+    }
+    .intro-title .sub-intro{
+        padding-top: 160px;
+        flex-wrap: wrap;
+    }
+    .intro-title .sub-intro h1{
+        font-size: 3.2rem;
+        font-weight: 600; 
+    }
+    .projects .skills-section .col-sm-2{
+        float: left; 
+        width: 40%;
+    }
+    .contacts{
+        color: white;
+        padding: 1rem 0;
+        background: var(--blue-dark);
+    }
+    .contacts .contacts-section{
+        padding: 1rem;
+    }
+    .contacts .contacts-section .con a{
+        margin: 10px;
+    }
+    .contacts .contacts-section .row{
+        padding: 1rem;
+    }
+}
+@media screen and (max-width:700px) {
+    header{min-height: 350px;}
+    .navbar-container-my{
+        padding: 3px 0;
+        background:var(--black-transperent);
+        position: fixed;
+        width: 100%;
+        box-shadow: 0 0 7px rgba(0,0,0,0.15);
+        z-index: 5;
+    }
+    .container-my{
+        max-width: 1280px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+    .navigations{
+        margin-left: 3rem;
+    }
+    .branding img{
+        width: 50px;
+        padding: 5px;
+    }
+    header nav .navigations a{
+        position: relative;
+        color: var(--black);
+        font-size: large;
+        font-weight: 600;
+        text-decoration: none;
+        margin-right: 2rem;
+        text-transform: uppercase;
+        transition: all 0.2s ease;
+    }
+    header nav .navigations a:after{
+        content: "";
+        position: absolute;
+        background-color: var(--blue-theme);
+        height: 2px;
+        width: 0;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;
+        
+    }
+    header nav .navigations a:hover{
+        color: var(--blue-theme);
+    }
+    header nav .navigations a:hover:after{
+        width: 100%;
+    }
+    header nav .branding{
+        margin-right: 0rem;
+    }
+    .intro-title .sub-intro{
+        padding-top: 150px;
+        flex-wrap: wrap;
+    }
+    .intro-title .sub-intro h1{
+        font-size: 3rem;
+        font-weight: 600; 
+    }
+    .contacts{
+        color: white;
+        padding: 1rem 0;
+        background: var(--blue-dark);
+    }
+    .contacts .contacts-section{
+        padding: 1rem;
+    }
+    .contacts .contacts-section .con a{
+        margin: 10px;
+    }
+    .contacts .contacts-section .row{
+        padding: 1rem;
+    }
+
+
+    .projects .skills-section .col-sm-2{
+        float: left; 
+        width: 65%;
+    }
+}
+@media screen and (max-width:460px) {
+    /* Mobiles */
+    header{min-height: 240px;}
+    .navbar-container-my{
+        padding: 3px 0;
+        background:var(--black-transperent);
+        position: fixed;
+        width: 100%;
+        box-shadow: 0 0 7px rgba(0,0,0,0.15);
+        z-index: 5;
+    }
+    .navigations{
+        margin-left: 2rem;
+    }
+    .branding img{
+        width: 50px;
+        padding: 5px;
+    }
+    header nav .navigations a{
+        position: relative;
+        color: var(--black);
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        margin-right: 1rem;
+        text-transform: uppercase;
+        transition: all 0.2s ease;
+    }
+    header nav .navigations a:after{
+        content: "";
+        position: absolute;
+        background-color: var(--blue-theme);
+        height: 2px;
+        width: 0;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;   
+    }
+    .intro-title .sub-intro{
+        padding-top: 100px;
+        flex-wrap: wrap;
+    }
+    .intro-title .sub-intro h1{
+        font-size: 2.4rem;
+        font-weight: 600; 
+    }
+    .about-me .row .content{
+        width: 90%;
+        margin: auto 1rem;
+        padding: auto 1rem;
+        font-size: 1rem;
+        line-height: 1;
+    }
+    .contacts{
+        color: white;
+        padding: 1rem 0;
+        background: var(--blue-dark);
+    }
+    .contacts .contacts-section{
+        padding: 1rem;
+    }
+    .contacts .contacts-section .con a{
+        margin: 10px;
+    }
+    .contacts .contacts-section .row{
+        padding: 1rem;
+    }
+    .projects .skills-section .col-sm-2{
+        float: left; 
+        width: 100%;}
+}
+@media screen and (max-width:383px) {
+    /* Mobiles */
+    header{min-height: 240px;}
+    .navbar-container-my{
+        padding: 3px 0;
+        background:var(--black-transperent);
+        position: fixed;
+        width: 100%;
+        box-shadow: 0 0 7px rgba(0,0,0,0.15);
+        z-index: 5;
+    }
+    .navigations{
+        margin-left: 1.8rem;
+    }
+    .branding img{
+        width: 45px;
+        padding: 5px;
+    }
+    header nav .navigations a{
+        position: relative;
+        color: var(--black);
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-decoration: none;
+        margin-right: 0.4rem;
+        text-transform: uppercase;
+        transition: all 0.2s ease;
+    }
+    header nav .navigations a:after{
+        content: "";
+        position: absolute;
+        background-color: var(--blue-theme);
+        height: 2px;
+        width: 0;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;   
+    }
+    .intro-title .sub-intro{
+        padding-top: 100px;
+        flex-wrap: wrap;
+    }
+    .intro-title .sub-intro h1{
+        font-size: 2.4rem;
+        font-weight: 600; 
+    }
+    .about-me .row .content{
+        width: 100%;
+        margin: auto 1rem;
+        padding: auto 1rem;
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+    .contacts{
+        color: white;
+        padding: 1rem 0;
+        background: var(--blue-dark);
+    }
+    .contacts .contacts-section{
+        padding: 1rem;
+    }
+    .contacts .contacts-section .con a{
+        margin: 10px;
+    }
+    .contacts .contacts-section .row{
+        padding: 1rem;
+    }
+    .projects .skills-section .col-sm-2{
+        float: left; 
+        width: 100%;}
+}

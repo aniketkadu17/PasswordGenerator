@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="I am passionate about learning and developing new technical skills and new technologies.">
+  <meta name="keywords" content="">
+  <meta name="page_type" content="np-template-header-footer-from-plugin">
+  <meta name="theme-color" content="#478ac9">
+  <meta property="og:title" content="Aniket Kadu | A Python Developer and Data Scientist">
+  <meta property="og:description" content="I am passionate about learning and developing new technical skills and new technologies.">
+  <meta property="og:type" content="website">
+
+
+  <link rel="icon" href="{% static 'images/favicon.ico' %}">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Aniket Kadu | A Python Developer and Data Scientist</title>
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" media="screen">
+  <link rel="stylesheet" href="{% static 'css/all.min.css' %}" media="screen">
+  <link rel="stylesheet" href="{% static 'css/otherstyle.css' %}" media="screen">
+
+</head>
+
+<body class="projects">
+    <a class="btn btn-outline-dark" href="{% url 'portfolio' %}" type="button"><- Back</a>
+    <section class="projects">
+        <div class="container-my items-center justify-between">
+            
+            <div class="title-container">
+                <h3>Custom Password Generator</h3>
+                <pre>{{error}}</pre>
+                <form action = "" method = "post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <br>
+                <input type="submit" value="Submit">
+                <br>
+                </form>
+                <br><br>
+                <textarea value="{{pass_char}}" style="width:500px; height:50px" id="myInput">{{pass_char}}</textarea>
+                <br>
+                <button onclick="myFunction()">Copy Password</button>
+            </div>
+        </div>
+    </section>
+
+
+<script>
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+  
+  /* Alert the copied text */
+  alert("Text Copied");
+}
+</script>
+
+</body>
+</html>

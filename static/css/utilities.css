@@ -1,0 +1,61 @@
+/* Flex box styles for responsive pages */
+.flex{
+    /* for flexing item of container or item */
+    /* flex makes items or containers alignment */
+    display: flex;
+}
+/* after Alingnment it adjust the size in (X-multiple) of item or containers */
+.flex1{flex: 1;}
+.flex2{flex: 2;}
+.flex3{flex: 3;}
+.flex4{flex: 4;}
+.flex5{flex: 5;}
+/* In flexing you can change the order of all items */
+/* order:1 */
+/* order:2 */
+/* order:2 */
+
+.items-center{
+    align-items: center;
+}
+.text-center{
+    text-align: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.flex-column{
+    flex-direction: column;
+}
+
+
+
+/* button section CSS */
+.btn{
+    padding: 0.5rem 1.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.btn-primary{
+    background: var(--blue-theme);
+    color: var(--black);
+}
+.btn-secondary{
+    background: var(--fainted-blue);
+    color: var(--black);
+}
+.btn-primary:hover{
+    background: transparent;
+    border-color: var(--black);
+    color: var(--black);
+}
+.btn-secondary:hover{
+    background: transparent;
+    border-color: var(--black);
+    color: var(--black);
+}
